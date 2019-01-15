@@ -53,8 +53,7 @@ public class EvtRoleAdd extends BaseEvent<GuildMemberRoleAddEvent> {
         EventValues.registerEventValue(RoleAddEvent.class, Role.class, new Getter<Role, RoleAddEvent>() {
             @Override
             public Role get(RoleAddEvent event) {
-                Role role = event.getJDAEvent().getRoles().get(0);
-                return role;
+                return event.getJDAEvent().getRoles().get(0);
             }
         }, 0);
 
